@@ -1,0 +1,32 @@
+## Project title
+"Encryption and Decryption of an LFSR based scheme and it's key recovery attack"
+
+## Author
+Prabal Das
+
+## Date and Place
+ISI, Kolkata | Nov. 2023 - Feb. 2024
+
+## Description
+This project contains two different file, one for encryption-decryption and another for cryptanalysis.
+First file has two different sectionin the driver code, one for encryption and another for decryption.
+Secret keys are embedded in the "Enc_Dec_main.c" file. if you want to change it, you need to go in that file and change.
+For encryption, you only need to give the message input. Notice, the message size is default 1000Byte and can be changed from  "Enc_Dec_main.c" file. After encryption, you will get a binary string, which is the corresponding ciphertext.
+For encryption, you only need to give the ciphertext input, which should be a valid ciphertext o/w after decryption you may get some non-printable character.
+All functions' declaration and definitions for "Enc_Dec_main.c" are written in "Enc_Dec_LFSR.c" and "Enc_Dec_LFSR.h" file.
+The code for cryptanalysis is written in "Cryptanalysis_LFSR.c" file.
+This is a ciphertext only attack, which takes a ciphertext input, which is embedded in the driver code in the file. You need to change it from the main code.
+In between of the implementation, you will get a set of possible keys for that ciphertext. From that set, brute-force attack is done to get a meaningful message. Here for correctness, I have embedded the corresponding plaintext encoding also, to check whether we are getting the original message or not.
+After completion of the implementation, you will get a set of keys which holds correctness for that pair of plaintext-ciphertext. To get the exact key, you need to do the brute force for those keys with another ciphertext, which is easy to implement and not done in this project.
+
+## Further Improvement
+While the current version of the project meets its intended goals, there are several areas where it could be further improved. Here are some suggestions for future enhancements:
+=> For cryptanalysis part, ciphertext input from user.
+=> For Brute-force part, check whether the decrypted msgs are meaningful/printable or not and then discard the key from possible key set
+=> Do the last Brute-force attack for final key recovery.
+
+## License
+This project is licensed under the MIT License.
+
+## Happy Coding!!
+Thank you for exploring this project. I hope this project proves valuable to you. Your contributions and feedback are greatly appreciated as I continue to evolve and improve. Happy coding!
